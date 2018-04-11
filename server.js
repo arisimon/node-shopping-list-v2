@@ -62,7 +62,7 @@ app.post('/recipes', jsonParser, (req, res) => {
       return res.status(400).send(message);
     }
   }
-  const item = Reciples.create(req.body.name, req.body.ingredients);
+  const item = Recipes.create(req.body.name, req.body.ingredients);
   res.status(201).json(item);
 });
 
